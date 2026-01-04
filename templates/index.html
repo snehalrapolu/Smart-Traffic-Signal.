@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Traffic Control System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css_traffic.css') }}">
+    <script src="{{ url_for('static', filename='js_traffic.js') }}"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚦 Adaptive Traffic Control System</h1>
+        <p class="subtitle">Intelligent Traffic Signal Management Based on Real-Time Density Analysis</p>
+
+        <div class="upload-section">
+            <div class="upload-grid">
+                <div class="upload-item">
+                    <label for="north">📍 North</label>
+                    <input type="file" id="north" accept="image/*">
+                </div>
+                <div class="upload-item">
+                    <label for="south">📍 South</label>
+                    <input type="file" id="south" accept="image/*">
+                </div>
+                <div class="upload-item">
+                    <label for="east">📍 East</label>
+                    <input type="file" id="east" accept="image/*">
+                </div>
+                <div class="upload-item">
+                    <label for="west">📍 West</label>
+                    <input type="file" id="west" accept="image/*">
+                </div>
+            </div>
+            <button class="upload-btn" id="uploadBtn" onclick="uploadImages()">
+                📤 Upload & Analyze Traffic
+            </button>
+            <div id="statusMessage"></div>
+        </div>
+
+        <div class="junction-container" id="junctionContainer">
+            <div class="road road-north">
+                <div class="road-label label-north">NORTH</div>
+                <div class="signal signal-north signal-red" id="signalNorth">🔴</div>
+            </div>
+            <div class="road road-south">
+                <div class="road-label label-south">SOUTH</div>
+                <div class="signal signal-south signal-red" id="signalSouth">🔴</div>
+            </div>
+            <div class="road road-east">
+                <div class="road-label label-east">EAST</div>
+                <div class="signal signal-east signal-red" id="signalEast">🔴</div>
+            </div>
+            <div class="road road-west">
+                <div class="road-label label-west">WEST</div>
+                <div class="signal signal-west signal-red" id="signalWest">🔴</div>
+            </div>
+            <div class="junction-center">
+                <div class="countdown" id="countdown">--</div>
+            </div>
+        </div>
+
+        <div class="info-panel" id="infoPanel" style="display: none;">
+            <div class="info-card">
+                <h3>Active Road</h3>
+                <div class="value" id="activeRoad">--</div>
+            </div>
+            <div class="info-card">
+                <h3>Remaining Time</h3>
+                <div class="value" id="remainingTime">--</div>
+            </div>
+            <div class="info-card">
+                <h3>Max Density</h3>
+                <div class="value" id="maxDensity">--</div>
+            </div>
+            <div class="info-card">
+                <h3>Status</h3>
+                <div class="value" id="systemStatus">Idle</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
