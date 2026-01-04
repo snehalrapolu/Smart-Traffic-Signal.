@@ -1,4 +1,4 @@
-🚦 Smart Traffic Signal System
+🚦 Smart Traffic Signal Syste
 
 An AI-powered adaptive traffic signal control system that dynamically adjusts green signal time based on real-time traffic density estimation using computer vision.
 
