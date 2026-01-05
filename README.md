@@ -89,12 +89,6 @@ Congestion control at intersections
 
 Simulation of adaptive traffic systems
 
-👥 Team Members
-
-Your Name
-
-Teammate Name (if any)
-
 📌 Future Improvements
 
 Integrate real-time CCTV feed
